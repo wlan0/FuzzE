@@ -1,0 +1,59 @@
+OPEN NN FRAMEWORK
+
+Version 0.0 :
+
+Remember to research on more snorm and tnorm operators and add them to open_nn    --   pending
+
+Also, Einstein product -- not sure it works properly....verify it!!!              --  works
+
+Okay, now its official....check all now, not just einstein...but all the tnorm and snorm operators
+
+Also add, delete and random access functions for the fuzzy sets						--  pending
+
+convert the vector into a hashmap, that way you can ensure unique members in the fuzzy set and avoid repetitons			--  DONE
+
+Most importantly, test everything and make sure it works!!
+
+In the Concepts related to fuzzy sets, the preliminary tests are complete!!...it had one error in the boolean expression of alpha cut...got that corrected
+
+
+NOTE :
+
+ALL THE WORK DONE SO FAR HAS BEEN DEPRECEATED IN FAVOUR OF THE NEW OPEN NN ...
+
+THE CODE IN THE PREVIOUS VERSION HAD DESIGN PROBLEMS
+
+THE BASIC UNIT OF FUZZY SETS fuzzy_set WAS NOT EASILY REFACTORABLE AND WAS NOT heirarchical, plus, duplicates could easily creep in and checking was required at every level.
+
+THEREFORE, THE NEW CLASS nn_fuzzy WILL BE THE NEW BASIC UNIT OF FUZZY SETS
+
+Version 0.1 :
+
+Thanks to the new data structure, duplicate values cannot exist in the set...we are using hash maps by the way..instead of vectors
+
+Now the design is better, you can refactor the basic set without worrying about the set operations/functions
+
+Making it a different data structure would be a cake walk with the new design, otherwise, all the functions also had be refactored depending on the data structure...
+
+Rewrite the complement function in the new format, otherwise it would defeat the whole purpose of new version....yes, i'm talking about nn_fuzzy_set...			-- DONE
+
+Now, include all the functions for fuzzy sets
+
+Functions to be included --  tnorm, snorm and concepts related to fuzzy sets    -- DONE
+
+Also Boundary testing has to be done for all the basic functions in nn_fuzzy.h and nn_fuzzy_set.h
+
+Backup copy of the latest version with deleted references of the previous version backed up in time machine and cloud   --DONE
+
+Figure out, how to compile as dylibs and as .a(static libraries) files, as this is a framework.
+
+Also learn to write apple scripts to package this as an application bundle.
+
+try and get xcode 4
+
+Okay, all the basic fuzzy operations and concepts on fuzzy sets are done in the new heirarchical model. Next step, testing(obviously) and add the next layer of the heirarchy.
+
+Extensions, convex sets, symmetric sets etc....
+
+okay, right now, not sure what convex set and symmetric set means exactly, therefore going to do the extension principle now. Get back to the other two later. Remember, to ask sir about these two, without fail.
+
